@@ -1,0 +1,27 @@
+entity Course {
+    name String required
+    description String
+}
+entity Student {
+    firstName String required
+    lastName String
+}
+entity Passport {
+    number String
+}
+entity Review {
+    rating Integer
+    subject String
+    description String
+}
+
+relationship OneToOne {
+	Student to Passport
+}
+relationship ManyToMany { 
+	Student to Course
+}
+relationship ManyToOne { 
+	Review to Course
+    Review to Student
+}
