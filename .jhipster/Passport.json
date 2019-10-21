@@ -1,0 +1,27 @@
+{
+    "name": "Passport",
+    "fields": [
+        {
+            "fieldName": "number",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "passport",
+            "relationshipName": "student",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191020045810",
+    "entityTableName": "passport",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

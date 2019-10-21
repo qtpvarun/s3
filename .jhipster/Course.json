@@ -1,0 +1,41 @@
+{
+    "name": "Course",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "review",
+            "otherEntityRelationshipName": "course",
+            "relationshipName": "review"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "course",
+            "relationshipName": "student",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191020045808",
+    "entityTableName": "course",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

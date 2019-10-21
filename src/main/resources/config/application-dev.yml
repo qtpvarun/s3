@@ -18,6 +18,8 @@ logging:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
     com.jgd.sms: DEBUG
+    org.hibernate.stat: DEBUG
+    org.hibernate.type: DEBUG
 
 spring:
   profiles:
@@ -38,7 +40,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/s3?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password:
+    password: JGDJan@20192
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -56,7 +58,8 @@ spring:
       hibernate.connection.provider_disables_autocommit: true
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
-      hibernate.generate_statistics: false
+      hibernate.generate_statistics: true
+      hibernate.format_sql: true
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker

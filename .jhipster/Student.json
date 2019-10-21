@@ -1,0 +1,49 @@
+{
+    "name": "Student",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "passport",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "passport",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "course",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "course",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "review",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "review"
+        }
+    ],
+    "changelogDate": "20191020045809",
+    "entityTableName": "student",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
